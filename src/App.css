@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #f4f1de;
+	font-family: 'Nunito', sans-serif;
+	color: #3d405b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.vinyl-app-container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.album-list-container {
+	margin: 10px;
+	display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.album-card {
+	width: 200px;
+	margin: 40px;
+	background-color: #81b29a;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	box-shadow: #3d405b 0 1px 3px;
+	border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.album-card:hover {
+	box-shadow: #3d405b 0 2px 6px;
+	transform: translate3D(0,-1px,0) scale(1.03);
+}
+
+.genre-year {
+	display: flex;
+	justify-content: space-around;
+}
+
+.title-artist {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h1 {
+	width: 100%;
+	height: 40px;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+img {
+	object-fit: cover;
+	order: -1;
+	border-radius: 10px 10px 0 0;
+}
+
+form {
+	text-align: center;
 }
