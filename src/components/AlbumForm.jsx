@@ -78,8 +78,8 @@ const AlbumForm = (props) => {
 						/>
 						<input
 							type="number"
-							min="1500"
-							max="2099"
+							min="1900"
+							max="2022"
 							step="1"
 							className="album-input"
 							placeholder="Year released?"
