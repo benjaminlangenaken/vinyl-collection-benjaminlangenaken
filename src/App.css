@@ -24,41 +24,58 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #f2cc8f;
+	margin-top: 15px;
+	padding: 20px;
+	border-radius: 50px;
+	box-shadow: #f2cc8f 0 0 2px;
 }
 
 .album-input {
 	width: 300px;
 	height: 20px;
-	margin-top: 10px;
-	border-radius: 4px;
+	margin-top: 15px;
+	padding: 15px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
 }
 
 .button-one {
 	width: 100px;
 	height: 40px;
-	margin: 10px 0;
+	margin: 15px 0;
 	padding: 10px 10px;
+	border: none;
 	border-radius: 10px;
+	color: #3d405b;
 	background-color: #81b29a;
+	box-shadow: #3d405b 0 1px 3px;
 }
 
 .button-one:hover {
 	background-color: #3d405b;
 	color: #f4f1de;
+	box-shadow: #3d405b 0 2px 3px;
 }
 
 .button-two {
-	margin: 10px 0 10px 50px;
+	margin: 15px 0 10px 50px;
 	width: 100px;
 	height: 40px;
 	padding: 10px 10px;
+	border: none;
 	border-radius: 10px;
+	color: #3d405b;
 	background-color: #81b29a;
+	box-shadow: #3d405b 0 1px 3px;
 }
 
 .button-two:hover {
 	background-color: #3d405b;
 	color: #f4f1de;
+	box-shadow: #3d405b 0 2px 3px;
 }
 
 .x-button {
@@ -67,14 +84,10 @@ body {
 	cursor: pointer;
 }
 
-.x-button:hover {
-	background-color: #81b29a;
-}
-
 .x-button-icon {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 5px;
+	right: 5px;
 	width: 25px;
 	height: 25px;
 	color: #f4f1de;
@@ -144,7 +157,7 @@ h3 {
 	margin-top: 15px;
 }
 
-img {
+.album-img {
 	object-fit: cover;
 	order: -1;
 	border-radius: 10px 10px 0 0;
@@ -155,8 +168,4 @@ img {
 	order: -1;
 	border-radius: 10px 10px 0 0;
 	padding: 20px;
-}
-
-form {
-	text-align: center;
 }
