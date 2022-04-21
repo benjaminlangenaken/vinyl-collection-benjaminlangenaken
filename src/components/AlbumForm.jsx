@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const AlbumForm = (props) => {
 	const [albumId, setAlbumId] = useState(3);
@@ -50,13 +50,19 @@ const AlbumForm = (props) => {
 			)}
 			{featuresVisible && (
 				<div className="add-album-container">
-					<form action="#" className="add-album-form" onSubmit={(event) => addAlbum(event)}>
+					<form
+						action="#"
+						className="add-album-form"
+						onSubmit={(event) => addAlbum(event)}
+					>
 						<input
 							type="text"
 							className="album-input"
 							placeholder="Enter the album title..."
 							value={albumTitle}
-							onChange={(event) => setAlbumTitle(event.target.value)}
+							onChange={(event) =>
+								setAlbumTitle(event.target.value)
+							}
 							required
 						/>
 						<input
@@ -64,7 +70,9 @@ const AlbumForm = (props) => {
 							className="album-input"
 							placeholder="Add the artist..."
 							value={albumArtist}
-							onChange={(event) => setAlbumArtist(event.target.value)}
+							onChange={(event) =>
+								setAlbumArtist(event.target.value)
+							}
 							required
 						/>
 						<input
@@ -75,7 +83,9 @@ const AlbumForm = (props) => {
 							className="album-input"
 							placeholder="Year released?"
 							value={albumYear}
-							onChange={(event) => setAlbumYear(event.target.value)}
+							onChange={(event) =>
+								setAlbumYear(event.target.value)
+							}
 							required
 						/>
 						<input
@@ -83,7 +93,9 @@ const AlbumForm = (props) => {
 							className="album-input"
 							placeholder="Genre?"
 							value={albumGenre}
-							onChange={(event) => setAlbumGenre(event.target.value)}
+							onChange={(event) =>
+								setAlbumGenre(event.target.value)
+							}
 							required
 						/>
 						<input
@@ -91,11 +103,18 @@ const AlbumForm = (props) => {
 							className="album-input"
 							placeholder="(optional) Image URL for your album"
 							value={albumImage}
-							onChange={(event) => setAlbumImage(event.target.value)}
+							onChange={(event) =>
+								setAlbumImage(event.target.value)
+							}
 						/>
-						<button type="submit">
-							+ Add album
-						</button>
+						<div>
+							<button type="submit">+ Add</button>
+							<button onClick={() =>
+								setFeaturesVisible(
+									(prevFeaturesVisible) => !prevFeaturesVisible)
+							} className="button-two">Cancel
+							</button>
+						</div>
 					</form>
 				</div>
 			)}

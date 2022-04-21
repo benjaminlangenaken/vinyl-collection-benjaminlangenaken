@@ -47,6 +47,10 @@ button:hover {
 	color: #f4f1de;
 }
 
+.button-two {
+	margin-left: 50px;
+}
+
 .album-list-container {
 	margin: 10px;
 	display: flex;
