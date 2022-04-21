@@ -33,7 +33,7 @@ body {
 	border-radius: 4px;
 }
 
-button {
+.button-one {
 	width: 100px;
 	height: 40px;
 	margin: 10px 0;
@@ -42,13 +42,47 @@ button {
 	background-color: #81b29a;
 }
 
-button:hover {
+.button-one:hover {
 	background-color: #3d405b;
 	color: #f4f1de;
 }
 
 .button-two {
-	margin-left: 50px;
+	margin: 10px 0 10px 50px;
+	width: 100px;
+	height: 40px;
+	padding: 10px 10px;
+	border-radius: 10px;
+	background-color: #81b29a;
+}
+
+.button-two:hover {
+	background-color: #3d405b;
+	color: #f4f1de;
+}
+
+.x-button {
+	background: #81b29a;
+	border: none;
+	cursor: pointer;
+}
+
+.x-button:hover {
+	background-color: #81b29a;
+}
+
+.x-button-icon {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 25px;
+	height: 25px;
+	color: #f4f1de;
+}
+
+.x-button-icon:hover {
+	color: #e07a5f;
+	transform: translate3D(0,-1px,0) scale(1.4);
 }
 
 .album-list-container {
