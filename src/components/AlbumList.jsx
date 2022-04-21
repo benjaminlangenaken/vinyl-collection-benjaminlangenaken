@@ -30,6 +30,10 @@ const AlbumList = (props) => {
 		props.setAlbums(updatedAlbums);
 	};
 
+	const deleteAlbum = (id) => {
+		props.setAlbums([...props.albums].filter((album) => id !== album.id));
+	};
+
 	return (
 		<>
 			<div className="album-list-container">
@@ -55,12 +59,12 @@ const AlbumList = (props) => {
 								alt="album cover"
 							/>
 						) : (
-							<img src={album.imgUrl} alt="album cover" />
+							<img src={album.imgUrl} className="album-img" alt="album cover" />
 						)}
 						{album.deleteVisible && (
 							<button
 								className="x-button"
-								// onClick={() => props.deleteTodo(todo.id)}
+								onClick={() => deleteAlbum(album.id)}
 							>
 								<svg
 									className="x-button-icon"
