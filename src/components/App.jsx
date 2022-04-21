@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import AlbumList from './AlbumList';
 import AlbumForm from './AlbumForm';
@@ -27,21 +27,25 @@ function App() {
 
 	return (
 		<div className="vinyl-app-container">
-			{albums.length === 0 ? (
-				<div className="header">
-					<h1>Add some vinyl!</h1>
-					<AlbumForm albums={albums} setAlbums={setAlbums}/>
-				</div>
-			) : (
-				<div className="header">
-					<h1>My collection</h1>
-					<AlbumForm albums={albums} setAlbums={setAlbums}/>
-				</div>
-			)}
+			<div className="header">
+				<img
+					src={require('../images/vinyl-icon.png')}
+					alt="vinyl-icon"
+				/>
+				{albums.length === 0 ? (
+					<>
+						<h1>Add some vinyl!</h1>
+						<AlbumForm albums={albums} setAlbums={setAlbums} />
+					</>
+				) : (
+					<>
+						<h1>My vinyl collection</h1>
+						<AlbumForm albums={albums} setAlbums={setAlbums} />
+					</>
+				)}
+			</div>
 
-			<AlbumList
-				albums={albums} setAlbums={setAlbums}
-			/>
+			<AlbumList albums={albums} setAlbums={setAlbums} />
 		</div>
 	);
 }
