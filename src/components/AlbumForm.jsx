@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const AlbumForm = (props) => {
 	const [albumId, setAlbumId] = useState(3);
@@ -39,6 +39,7 @@ const AlbumForm = (props) => {
 		<>
 			{!featuresVisible && (
 				<button
+					className="button-one"
 					onClick={() =>
 						setFeaturesVisible(
 							(prevFeaturesVisible) => !prevFeaturesVisible
@@ -108,11 +109,19 @@ const AlbumForm = (props) => {
 							}
 						/>
 						<div>
-							<button type="submit">+ Add</button>
-							<button onClick={() =>
-								setFeaturesVisible(
-									(prevFeaturesVisible) => !prevFeaturesVisible)
-							} className="button-two">Cancel
+							<button type="submit" className="button-one">
+								+ Add
+							</button>
+							<button
+								onClick={() =>
+									setFeaturesVisible(
+										(prevFeaturesVisible) =>
+											!prevFeaturesVisible
+									)
+								}
+								className="button-two"
+							>
+								Cancel
 							</button>
 						</div>
 					</form>
