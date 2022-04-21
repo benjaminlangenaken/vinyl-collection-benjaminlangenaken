@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import AlbumList from './AlbumList';
+import AlbumForm from './AlbumForm';
 
 function App() {
 	const [albums, setAlbums] = useState([
@@ -24,23 +25,17 @@ function App() {
 
 	return (
 		<div className="vinyl-app-container">
-			<div className="add-album-container">
-				{albums.length === 0 ? (
-					<>
-						<h2>Start adding some vinyl!</h2>
-						<form action="#">
-							<input
-								type="text"
-								className="vinyl-title-input"
-								placeholder="Please enter the album title..."
-								defaultValue=""
-							/>
-						</form>
-					</>
-				) : (
+			{albums.length === 0 ? (
+				<div className="header">
+					<h1>Add some vinyl!</h1>
+					<AlbumForm albums={albums} setAlbums={setAlbums} />
+				</div>
+			) : (
+				<div className="header">
 					<h1>My collection</h1>
-				)}
-			</div>
+					<AlbumForm albums={albums} setAlbums={setAlbums} />
+				</div>
+			)}
 
 			<AlbumList albums={albums} />
 		</div>
