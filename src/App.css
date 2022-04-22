@@ -107,6 +107,7 @@ body {
 
 .album-card {
 	width: 200px;
+	height: 350px;
 	margin: 40px;
 	background-color: #81b29a;
 	display: flex;
@@ -122,12 +123,22 @@ body {
 	transform: translate3D(0,-1px,0) scale(1.03);
 }
 
+.album-card-text-container {
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+
 .genre-year {
+	height: 25px;
 	display: flex;
 	justify-content: space-around;
 }
 
 .title-artist {
+	height: 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

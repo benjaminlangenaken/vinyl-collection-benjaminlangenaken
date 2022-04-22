@@ -44,13 +44,15 @@ const AlbumList = (props) => {
 						onMouseOver={() => showDeleteButton(album.id)}
 						onMouseOut={() => hideDeleteButton(album.id)}
 					>
-						<div className="genre-year">
-							<h3>{album.releaseYear}</h3>
-							<h3>{album.genre}</h3>
-						</div>
-						<div className="title-artist">
-							<h2>{album.title}</h2>
-							<h2>{album.artist}</h2>
+						<div className="album-card-text-container">
+							<div className="genre-year">
+								<h3>{album.releaseYear}</h3>
+								<h3>{album.genre}</h3>
+							</div>
+							<div className="title-artist">
+								<h2>{album.title}</h2>
+								<h2>{album.artist}</h2>
+							</div>
 						</div>
 						{!urlPatternValidation(album.imgUrl) ? (
 							<img
@@ -59,7 +61,11 @@ const AlbumList = (props) => {
 								alt="album cover"
 							/>
 						) : (
-							<img src={album.imgUrl} className="album-img" alt="album cover" />
+							<img
+								src={album.imgUrl}
+								className="album-img"
+								alt="album cover"
+							/>
 						)}
 						{album.deleteVisible && (
 							<button
