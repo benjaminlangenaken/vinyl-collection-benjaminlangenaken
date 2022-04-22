@@ -91,6 +91,7 @@ body {
 	width: 25px;
 	height: 25px;
 	color: #f4f1de;
+	z-index: 1;
 }
 
 .x-button-icon:hover {
@@ -258,10 +259,38 @@ h3:hover {
 	height: 30px;
 	align-self: center;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 10px;
 	padding: 10px;
 	border-radius: 25px;
 	color: #3d405b;
 	background: #f1faee;
 	border: none;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #3d405b;
+}
+
+.overlay:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.text {
+	color: #f4f1de;
+	font-size: 18px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }

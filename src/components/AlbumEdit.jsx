@@ -243,61 +243,17 @@ const AlbumEdit = (props) => {
 			</div>
 
 			{!urlPatternValidation(props.album.imgUrl) ? (
-				<>
-					{!props.album.isEditingImgUrl ? (
-						<img
-							src={require('../images/vinyl.png')}
-							className="placeholder-img"
-							alt="album cover"
-							onDoubleClick={() =>
-								editAlbumImgUrl(props.album.id)
-							}
-						/>
-					) : (
-						<input
-							type="text"
-							autoFocus
-							className="card-input-image"
-							defaultValue={props.album.imgUrl}
-							onBlur={(event) =>
-								updateAlbumImgUrl(event, props.album.id)
-							}
-							onKeyDown={(event) => {
-								if (event.key === 'Enter') {
-									updateAlbumImgUrl(event, props.album.id);
-								}
-							}}
-						/>
-					)}
-				</>
+				<img
+					src={require('../images/vinyl.png')}
+					className="placeholder-img"
+					alt="album cover"
+				/>
 			) : (
-				<>
-					{!props.album.isEditingImgUrl ? (
-						<img
-							src={props.album.imgUrl}
-							className="album-img"
-							alt="album-cover"
-							onDoubleClick={() =>
-								editAlbumImgUrl(props.album.id)
-							}
-						/>
-					) : (
-						<input
-							type="text"
-							autoFocus
-							className="card-input-image"
-							defaultValue={props.album.imgUrl}
-							onBlur={(event) =>
-								updateAlbumImgUrl(event, props.album.id)
-							}
-							onKeyDown={(event) => {
-								if (event.key === 'Enter') {
-									updateAlbumImgUrl(event, props.album.id);
-								}
-							}}
-						/>
-					)}
-				</>
+				<img
+					src={props.album.imgUrl}
+					className="album-img"
+					alt="album-cover"
+				/>
 			)}
 			{props.album.deleteVisible && (
 				<button
@@ -310,6 +266,27 @@ const AlbumEdit = (props) => {
 						className="x-button-icon"
 					/>
 				</button>
+			)}
+			{!props.album.isEditingImgUrl ? (
+				<div
+					className="overlay"
+					onDoubleClick={() => editAlbumImgUrl(props.album.id)}
+				>
+					<div className="text">Change image</div>
+				</div>
+			) : (
+				<input
+					type="text"
+					autoFocus
+					className="card-input-image"
+					defaultValue={props.album.imgUrl}
+					onBlur={(event) => updateAlbumImgUrl(event, props.album.id)}
+					onKeyDown={(event) => {
+						if (event.key === 'Enter') {
+							updateAlbumImgUrl(event, props.album.id);
+						}
+					}}
+				/>
 			)}
 		</>
 	);
