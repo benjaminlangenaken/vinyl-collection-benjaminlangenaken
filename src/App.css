@@ -116,6 +116,7 @@ body {
 	position: relative;
 	box-shadow: #3d405b 0 1px 3px;
 	border-radius: 10px;
+	overflow: hidden;
 }
 
 .album-card:hover {
@@ -158,8 +159,14 @@ h1 {
 h2 {
 	width: 100%;
 	height: 40px;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
+}
+
+h2:hover {
+	transform: translate3D(0,-1px,0) scale(1.15);
+	color: #f4f1de;
+	cursor: pointer;
 }
 
 h3 {
@@ -168,10 +175,20 @@ h3 {
 	margin-top: 15px;
 }
 
+h3:hover {
+	transform: translate3D(0,-1px,0) scale(1.3);
+	color: #f4f1de;
+	cursor: pointer;
+}
+
 .album-img {
 	object-fit: cover;
 	order: -1;
 	border-radius: 10px 10px 0 0;
+}
+
+.album-img:hover {
+	cursor: pointer;
 }
 
 .placeholder-img {
@@ -179,4 +196,72 @@ h3 {
 	order: -1;
 	border-radius: 10px 10px 0 0;
 	padding: 20px;
+}
+
+.placeholder-img:hover {
+	cursor: pointer;
+}
+
+.card-input-year {
+	width: 70px;
+	height: 20px;
+	text-align: center;
+	margin-top: 15px;
+	padding: 10px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
+}
+
+.card-input-genre {
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	margin-top: 15px;
+	padding: 10px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
+}
+
+.card-input-title {
+	width: 150px;
+	height: 35px;
+	align-self: center;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
+}
+
+.card-input-artist {
+	width: 150px;
+	height: 35px;
+	align-self: center;
+	text-align: center;
+	padding: 5px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
+}
+
+.card-input-image {
+	order: -1;
+	font-size: 12px;
+	width: 180px;
+	height: 30px;
+	align-self: center;
+	text-align: center;
+	margin-top: 80px;
+	padding: 10px;
+	border-radius: 25px;
+	color: #3d405b;
+	background: #f1faee;
+	border: none;
 }
