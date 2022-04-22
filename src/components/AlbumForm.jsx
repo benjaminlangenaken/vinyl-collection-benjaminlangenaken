@@ -22,6 +22,11 @@ const AlbumForm = (props) => {
 				releaseYear: albumYear,
 				genre: albumGenre,
 				imgUrl: albumImage,
+				deleteVisible: false,
+				isEditingYear: false,
+				isEditingTitle: false,
+				isEditingArtist: false,
+				isEditingImage: false,
 			},
 		]);
 

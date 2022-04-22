@@ -13,6 +13,11 @@ function App() {
 			genre: 'Jazz',
 			imgUrl: 'https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-031-Miles-Davis-KIND-OF-BLUE.jpg?w=1000',
 			deleteVisible: false,
+			isEditingYear: false,
+			isEditingGenre: false,
+			isEditingTitle: false,
+			isEditingArtist: false,
+			isEditingImage: false,
 		},
 		{
 			id: 2,
@@ -22,6 +27,11 @@ function App() {
 			genre: 'Folk',
 			imgUrl: 'https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-003-JoniMitchell-BLUE-HR.jpg?w=1000',
 			deleteVisible: false,
+			isEditingYear: false,
+			isEditingGenre: false,
+			isEditingTitle: false,
+			isEditingArtist: false,
+			isEditingImage: false,
 		},
 		{
 			id: 3,
@@ -31,6 +41,11 @@ function App() {
 			genre: 'Indie',
 			imgUrl: 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-189620-MI0003829258.jpg',
 			deleteVisible: false,
+			isEditingYear: false,
+			isEditingGenre: false,
+			isEditingTitle: false,
+			isEditingArtist: false,
+			isEditingImage: false,
 		},
 		{
 			id: 4,
@@ -40,6 +55,11 @@ function App() {
 			genre: 'Piano',
 			imgUrl: 'https://etr-media.s3-eu-west-1.amazonaws.com/557/cover.jpg',
 			deleteVisible: false,
+			isEditingYear: false,
+			isEditingGenre: false,
+			isEditingTitle: false,
+			isEditingArtist: false,
+			isEditingImage: false,
 		},
 	]);
 
@@ -63,7 +83,10 @@ function App() {
 				)}
 			</div>
 
-			<AlbumList albums={albums} setAlbums={setAlbums} />
+			<AlbumList
+				albums={albums}
+				setAlbums={setAlbums}
+			/>
 		</div>
 	);
 }
