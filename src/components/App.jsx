@@ -23,6 +23,24 @@ function App() {
 			imgUrl: 'https://www.rollingstone.com/wp-content/uploads/2020/09/R1344-003-JoniMitchell-BLUE-HR.jpg?w=1000',
 			deleteVisible: false,
 		},
+		{
+			id: 3,
+			title: 'Carrie & Lowell',
+			artist: 'Sufjan Stevens',
+			releaseYear: 2015,
+			genre: 'Indie',
+			imgUrl: 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-189620-MI0003829258.jpg',
+			deleteVisible: false,
+		},
+		{
+			id: 4,
+			title: 'Trance Frendz',
+			artist: 'Nils Frahm, Ólafur Arnalds',
+			releaseYear: 2016,
+			genre: 'Piano',
+			imgUrl: 'https://etr-media.s3-eu-west-1.amazonaws.com/557/cover.jpg',
+			deleteVisible: false,
+		},
 	]);
 
 	return (
